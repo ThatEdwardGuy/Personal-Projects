@@ -1,3 +1,16 @@
+
+/*
+
+Is Friday the 13th a rare day?
+In other words: Is 'Friday' the 13th rarer compared to 'Other weekdays' the 13th?
+To answer that question, I coded this little program to calculate the frequency of each 'Weekday' the 13th from 1/1/1900 to 31/12/[Input], given 1/1/1900 is Monday.
+Input: year
+Output: Saturdays - Sundays - Mondays - Tuesdays - Wednesdays - Thursdays - Fridays
+Result: Friday the 13th is not as rare as you may think, in fact it's the most frequent out of all weekdays.
+Don't believe me? Test it for yourself with my source code.
+
+*/
+
 #include <iostream>
 
 int LeapYear(int n){ // Check if n is a leap year or not
