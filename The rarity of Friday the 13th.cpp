@@ -50,17 +50,17 @@ int CountDays(int day, int month, int year){ // Count the days from 1/1/1900 to 
 void HowMany13ths (int N){
 	int i, j, days;
 	int mondays = 0, tuesdays = 0, wednesdays = 0, thursdays = 0, fridays = 0, saturdays = 0, sundays = 0;
-	for (i = 1900; i <= N; i++){                // From year 1900 to year N (of course N > 1900)
-		for (j = 1; j <= 12; j++){              // Each year have 12 months
-			days = CountDays(13, j, i);         // Calculate how many days from 1/1/1900 to 13/j/i
-			switch (days % 7){                  // Divide 'days' by 7 to figure out which weekday it is
+	for (i = 1900; i <= N; i++){                // From year 1900 to year N (of course N >=1900)
+		for (j = 1; j <= 12; j++){          // Each year have 12 months
+			days = CountDays(13, j, i); // Calculate how many days from 1/1/1900 to 13/j/i
+			switch (days % 7){          // Divide 'days' by 7 to figure out which weekday it is
 				case 0: sundays++; 	break;      // If 'days' % 7 == 0 then it is a Sunday
 				case 1: mondays++; 	break;      //_________________ 1 ____________ Monday
 				case 2: tuesdays++;	break;      //_________________ 2 ____________ Tuesday
-				case 3: wednesdays++;	break;  //_________________ 3 ____________ Wednesday
-				case 4: thursdays++;	break;  //_________________ 4 ____________ Thursday
+				case 3: wednesdays++;	break;      //_________________ 3 ____________ Wednesday
+				case 4: thursdays++;	break;      //_________________ 4 ____________ Thursday
 				case 5: fridays++;	break;      //_________________ 5 ____________ Friday
-				case 6: saturdays++;	break;  //_________________ 6 ____________ Saturday
+				case 6: saturdays++;	break;      //_________________ 6 ____________ Saturday
 			}
 		}
 	}
